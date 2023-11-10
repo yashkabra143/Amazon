@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { login } from './test_common';
 import { config } from './config';
 
-test('Go to Amazon.com, Validate Login, and Capture Screenshot on Failure', async ({context, browser, page }) => {
+test('Go to Amazon.com, Validate Login, and Capture Screenshot on Failure', async ({ context, browser, page }) => {
   try {
     // Step 1: Login to the page
     await login(page);
@@ -13,7 +13,7 @@ test('Go to Amazon.com, Validate Login, and Capture Screenshot on Failure', asyn
     // Step 3: Expectation: Check if the greeting text is visible
     await expect(signInText).toBeVisible();
     await context.close();
-    
+
   } catch (error) {
     // Capture a screenshot if the test fails
     await page.screenshot({ path: 'login_failure_screenshot.png' });
