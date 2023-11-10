@@ -7,7 +7,7 @@ export async function login(page: Page) {
   await page.goto(config.BASE_URL);
   await page.getByRole('link', { name: 'Hello, sign in Account & Lists' }).click();
   await page.getByLabel('Email or mobile phone number').click();
-  await page.getByLabel('Email or mobile phone number').fill(config.USERNAME);
+  await page.getByLabel('Email or mobile phone number').fill(config.EMAIL);
   await page.getByLabel('Email or mobile phone number').press('Enter');
   await page.getByLabel('Password').fill(config.PASSWORD);
   await page.getByLabel('Password').press('Enter');

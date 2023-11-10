@@ -14,10 +14,15 @@ This repository contains Playwright automation scripts for testing Amazon.com fu
 3. **Install Dependencies**
     npm install
 
+4. **Add Credentials**
+   Open config.ts and update the username and password fields with your Amazon account credentials.
 
-4. **Run Test Cases**
+5. **Run Test Cases**
    npx playwright test
    OR
    npx playwright test --ui
    OR
    npx playwright test show report
+
+
+
